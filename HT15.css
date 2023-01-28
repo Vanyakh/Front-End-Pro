@@ -1,0 +1,37 @@
+form {
+  width: 500px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  color: #fff;
+  background: #0099ff;
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[type=submit]:hover {
+  opacity: 0.8;
+}
