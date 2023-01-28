@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>My Profile</title>
+        <script>
+            // get user's screen size
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            console.log("Screen size: " + width + " x " + height);
+            // redirect to login page
+            function back() {
+                window.location.href = "login.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>My Profile</h1>
+            <p>Welcome to your profile page.</p>
+        </div>
+        <div>
+            <button onclick="back();">Back</button>
+        </div>
+    </body>
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE"></script>
+        <script>
+            // get user's current location
+            navigator.geolocation.getCurrentPosition(function(position) {
+                // log it to the console
+                console.log(position);
+                // get coordinates
+                let lat = position.coords.latitude;
+                let lng = position.coords.longitude;
+                // create a map object
+                let map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 8,
+                    center: {lat: lat, lng: lng}
+                });
+                // get address from coordinates
+                let geocoder = new google.maps.Geocoder;
+                let latlng = {lat: lat, lng: lng};
+                geocoder.geocode({'location': latlng}, function(results, status) {
+                    if (status == 'OK') {
+                        console.log(results[0].formatted_address);
+                    }
+                });
+            });
+        </script>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <script>
+            function login() {
+                // get values from user input
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+                // log them to the console
+                console.log(email + " " + password);
+                // redirect to profile page after 2 seconds
+                setTimeout(function(){
+                    window.location.href = "my-profile.html";
+                }, 2000);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label>Email:</label>
+            <input type="text" id="email" />
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" id="password" />
+        </div>
+        <div>
+            <button onclick="login();">Login</button>
+        </div>
+    </body>
+</html>
