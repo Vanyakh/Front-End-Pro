@@ -1,0 +1,18 @@
+
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" id="input-field">
+    <div id="div-container" style="display: none;"></div>
+  </body>
+  <script>
+    document.getElementById("input-field").addEventListener("focus", () => {
+      document.getElementById("div-container").style.display = "block";
+    });
+
+    document.getElementById("input-field").addEventListener("blur", () => {
+      document.getElementById("div-container").style.display = "none";
+    });
+  </script>
+</html>
